@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Medicine - MedicWaste</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+        .container {
+            max-width: 1500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            font-size:35px;
+        }
+        .btn {
+            background: #d63384;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 30px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .btn:hover {
+            background: #d63384;
+        }
+        label, input, select, textarea {
+            display: block;
+            width: 100%;
+            height:34px;
+            margin: 10px 0;
+            font-size:24px;
+        }
+        h2{
+            color:#d63384
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Request Medicine</h2>
+        <form id="requestForm">
+            <label for="requesterName">Your Name / Organization:</label>
+            <input type="text" id="requesterName" name="requesterName" required>
+
+            <label for="medicineName">Medicine Name:</label>
+            <input type="text" id="medicineName" name="medicineName" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <label for="reason">Reason for Request:</label>
+            <textarea id="reason" name="reason" required></textarea>
+
+            <label for="validationDoc">Upload Supporting Document (Prescription/NGO Registration):</label>
+            <input type="file" id="validationDoc" name="validationDoc" required>
+
+            <button type="submit" class="btn">Submit Request</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('requestForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Your request has been submitted and is under review.');
+        });
+    </script>
+</body>
+</html>
